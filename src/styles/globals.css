@@ -2,8 +2,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: Product Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: linear-gradient(162.87deg, #FE2B34 -2.15%, #ED2946 0.92%, #BE247A 9.09%, #9B20A0 16.24%, #861EB8 22.37%, #7F1EC1 26.45%, #7F1EC2 27.48%, #7815D2 31.56%, #6E0AE9 37.69%, #6803F8 43.82%, #6601FD 48.93%, #4E08CB 61.18%, #251577 81.61%) !important;
 }
 
 a {

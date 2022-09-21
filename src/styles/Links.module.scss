@@ -5,6 +5,7 @@ $top-media: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
 }
 
 @mixin arrowAnimation($topValue, $rightValue) {
@@ -89,34 +90,6 @@ $top-media: 200px;
   text-align: center;
   width: 100%;
   position: relative;
-  .profileImage {
-    width: 198px;
-    border-radius: 50%;
-    box-shadow: 39.933px 47.4274px 110px rgba(36, 22, 104, 0.14), 27.6621px 32.8535px 69.8484px rgba(36, 22, 104, 0.110204), 18.0455px 21.4322px 42.0117px rgba(36, 22, 104, 0.0902041), 10.804px 12.8317px 23.9883px rgba(36, 22, 104, 0.0760816), 5.65815px 6.72003px 13.277px rgba(36, 22, 104, 0.0639184), 2.32846px 2.76544px 7.37609px rgba(36, 22, 104, 0.0497959), 0.535545px 0.636052px 3.78426px rgba(36, 22, 104, 0.0297959);
-  }
-  .arrowImage {
-    width: 2rem;
-    position: absolute;
-    top: 0;
-    @media screen and (max-width: 420px) {
-      @include arrowAnimation(-180px, 60px);
-    }
-    @media screen and (min-width: 420px) {
-      @include arrowAnimation(-240px, 100px);
-    }
-  }
-  .nameBox {
-    .boxImage {
-      display: inline;
-      height: 150px;
-      position: relative;
-    }
-    margin-top: 1rem;
-    margin-bottom: 3rem;
-    h1 {
-      margin-top: -4.5rem;
-    }
-  }
   @media screen and (max-width: 420px) {
     .profileImage {
       width: 148px;
@@ -133,36 +106,76 @@ $top-media: 200px;
   }
 }
 
+.nameBox {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  h1 {
+    margin-top: -4.5rem;
+  }
+  @media screen and (max-width: 420px) {
+    h1 {
+      margin-top: -4rem !important;
+    }
+  }
+}
+
+.boxImage {
+  display: inline;
+  position: relative;
+}
+
+.arrowImage {
+  width: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  @media screen and (max-width: 420px) {
+    @include arrowAnimation(-180px, 50px);
+  }
+  @media screen and (min-width: 420px) {
+    @include arrowAnimation(-240px, 120px);
+  }
+}
+
 
 .links {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 3rem;
+  grid-template-columns: 1fr;
   row-gap: 2rem;
   margin: 2rem 0;
-  @media screen and (max-width: 520px) {
-    display: flex;
-    flex-direction: column;
-  }
+  padding: 0 2rem;
 }
 
 .link {
   text-decoration: none;
   color: #FFF;
   cursor: pointer;
-  background: #242424;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
   border-radius: 0.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 1.5rem 4rem;
   font-weight: 600;
   box-shadow: 19.6198px 32.5433px 80px rgba(0, 0, 0, 0.14), 13.5909px 22.5431px 50.7988px rgba(0, 0, 0, 0.110204), 8.86609px 14.7061px 30.5539px rgba(0, 0, 0, 0.0902041), 5.30822px 8.8047px 17.4461px rgba(0, 0, 0, 0.0760816), 2.77995px 4.61108px 9.65598px rgba(0, 0, 0, 0.0639184), 1.14401px 1.89757px 5.36443px rgba(0, 0, 0, 0.0497959), 0.263123px 0.43644px 2.75219px rgba(0, 0, 0, 0.0297959);
-  span {
-    margin-right: 2rem;
-  }
+  text-align: center;
   transition: all .4s;
   &:hover {
     transform: scale(1.05);
   }
+}
+
+.button {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+}
+
+.description {
+  margin-top: 2rem;
+  margin-bottom: 2rem !important;
+  max-width: 746px;
+  line-height: 140%;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  margin: 0 auto;
 }
