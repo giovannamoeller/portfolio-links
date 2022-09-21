@@ -7,6 +7,7 @@ import LINKS from '../../src/graphql/queries.js';
 import Image from 'next/image';
 import client from '../../src/graphql/config';
 import { categories } from '../../src/lib/category';
+import Link from 'next/link';
 
 function Links() {
   return (
@@ -37,9 +38,9 @@ function Links() {
     <section className={styles.links}>
       {categories.map(({ name, slug }) => {
         return (
-					<a href={`/links/${slug}`} className={styles.link} key={name} rel='noreferrer'>
+					<Link href={`/links/${slug}`} className={styles.link} key={name} rel='noreferrer'>
 						<span>{name}</span>
-					</a>
+					</Link>
         )
       })}
 	  </section>

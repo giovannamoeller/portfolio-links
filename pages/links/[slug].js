@@ -7,8 +7,7 @@ import LINKS from '../../src/graphql/queries.js';
 import Image from 'next/image';
 import client from '../../src/graphql/config';
 import { categories } from '../../src/lib/category';
-import Link from 'next/link'
-
+import Link from 'next/link';
 
 export default function LinkPage({name, description, links}) {
   return (
@@ -31,9 +30,9 @@ export default function LinkPage({name, description, links}) {
       <section className={styles.links}>
       {links.map(({ name, url }) => {
         return (
-          <a href={url} target='_blank' className={styles.link} key={name} rel='noreferrer'>
+          <Link href={url} target='_blank' className={styles.link} key={name} rel='noreferrer'>
             <span>{name}</span>
-          </a>
+          </Link>
         )
       })}
     </section>
