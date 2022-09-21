@@ -38,8 +38,8 @@ function Links() {
     <section className={styles.links}>
       {categories.map(({ name, slug }) => {
         return (
-					<Link href={`/links/${slug}`} className={styles.link} key={name} rel='noreferrer'>
-						<span>{name}</span>
+					<Link href={`/links/${slug}`} key={name} rel='noreferrer'>
+						<a className={styles.link}>{name}</a>
 					</Link>
         )
       })}

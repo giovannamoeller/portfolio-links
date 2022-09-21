@@ -54,10 +54,34 @@ export const categories = [
     },
     {
         name: 'Livros de Programação',
-        slug: 'books'
+        slug: 'books',
+        links: [
+            {
+                name: 'Entendendo Algoritmos: Um Guia Ilustrado Para Programadores e Outros Curiosos',
+                url: 'https://amzn.to/3qWgpbH'
+            },
+            {
+                name: 'Código Limpo',
+                url: 'https://amzn.to/3fbeDkt'
+            },
+            {
+                name: 'Cracking the Code Interview',
+                url: 'https://amzn.to/3dvM6p4'
+            },
+        ]
     },
     {
         name: 'Eventos de Tecnologia',
-        slug: 'events'
+        slug: 'events',
+        links: [
+            {
+                name: 'NextJS Conf 2022 - 25/10',
+                url: 'https://nextjs.org/conf'
+            },
+            {
+                name: 'CodeCon 2022 - 22/09',
+                url: 'https://www.sympla.com.br/evento-online/codecon-2022-be-the-developer-of-the-future/1631778?d=GIRLCODING'
+            },
+        ]
     },
 ]

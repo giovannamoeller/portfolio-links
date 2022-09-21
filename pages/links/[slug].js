@@ -30,8 +30,8 @@ export default function LinkPage({name, description, links}) {
       <section className={styles.links}>
       {links.map(({ name, url }) => {
         return (
-          <Link href={url} target='_blank' className={styles.link} key={name} rel='noreferrer'>
-            <span>{name}</span>
+          <Link href={url} target='_blank' key={name} rel='noreferrer'>
+            <a className={styles.link}>{name}</a>
           </Link>
         )
       })}
